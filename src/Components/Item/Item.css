@@ -1,0 +1,21 @@
+.ItemImg{
+    width: 250px;
+}
+.Info{
+    font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+}
+
+.ItemFooter{
+    justify-content: center;
+}
+.Option{
+    justify-content: center;
+}
+
+.CardItem{
+    width: auto;
+    background-color: blanchedalmond;
+    justify-content: center;
+    padding-bottom: 30px;
+}

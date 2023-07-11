@@ -1,0 +1,16 @@
+.menu{
+    padding-top: 28px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+.boton{
+    width: 100px;
+    background-color: rgb(101, 235, 253);
+    border-radius: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    border-color: silver;
+    border-width: 5px;
+    
+}
