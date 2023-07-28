@@ -5,7 +5,7 @@ import {getDocs, collection, query, where} from 'firebase/firestore'
 import { db } from "../../config/firebase";
 
 
-const ItemListContainer = ( props ) => {
+const ItemListContainer = ( greeting ) => {
 
     const [products, setProducts] = useState([])
     const {categoryId} = useParams()
@@ -26,10 +26,7 @@ const ItemListContainer = ( props ) => {
             })
             .catch(error => {
                 console.log(error)
-            })/*
-            .finally(() => {
-                setLoading(false)
-            })*/
+            })
     }, [categoryId])
 
     return (
