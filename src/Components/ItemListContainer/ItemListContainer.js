@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import {getDocs, collection, query, where, getDoc} from 'firebase/firestore'
+import {getDocs, collection, query, where} from 'firebase/firestore'
 import { db } from "../../config/firebase";
 
 
-const Itemlistcontainer = ( props ) => {
+const ItemListContainer = ( props ) => {
 
     const [products, setProducts] = useState([])
     const {categoryId} = useParams()
@@ -40,4 +40,4 @@ const Itemlistcontainer = ( props ) => {
 
 }
 
-export default Itemlistcontainer;
+export default ItemListContainer;
