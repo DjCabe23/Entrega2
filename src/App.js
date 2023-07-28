@@ -1,27 +1,33 @@
-import NavBar from "./Components/NavBar/NavBar";
-import Itemlistcontainer from "./Components/ItemListContainer.js/ItemListContainer";
-import CartWidget from "./Components/CartWidget/CartWidget";
-import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
+import NavBar from "./Components/NavBar/NavBar";
+import Itemlistcontainer from "./Components/ItemDetailContainer/ItemDetailContainer";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "./Components/Cart/Cart"
+import { CartProvider } from "./context/CartContext";
+import Checkaout from "./Components/CheCkout/Checkout"
 
-function App () {
+function App() {
 
-    return(
+    return (
         <div className="App">
             <BrowserRouter>
-            <NavBar />
-            <Routes>
-              <Route path = "/" element={<Itemlistcontainer></Itemlistcontainer>}></Route>
-              <Route path="/category/:categoryId" element={<Itemlistcontainer></Itemlistcontainer>}></Route>  
-              <Route path="/item/:itemId" element={<ItemDetailContainer></ItemDetailContainer>}></Route>
-              <Route path="*" element={<h1>404 NOT FOUND</h1>}></Route>
-            </Routes>
+                <CartProvider>
+                    <NavBar />
+                    <Routes>
+                        <Route path="/" element={<Itemlistcontainer></Itemlistcontainer>}></Route>
+                        <Route path="/category/:categoryId" element={<Itemlistcontainer></Itemlistcontainer>}></Route>
+                        <Route path="/item/:itemId" element={<ItemDetailContainer></ItemDetailContainer>}></Route>
+                        <Route path="/cart" element={<Cart></Cart>}></Route>
+                        <Route path="*" element={<h1>404 NOT FOUND</h1>}></Route>
+                    </Routes>
+                </CartProvider>
             </BrowserRouter>
-            
+
 
         </div>
     )
 }
 
 export default App;
+

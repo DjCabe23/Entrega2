@@ -22,7 +22,7 @@ const products = [
             name: 'Sommier ',
             price: 1500,
             category: 'Camas',
-            img:"https://www.colchoncity.com.ar/wp-content/uploads/compacfirm2022-sommier-2plazas.jpg",
+            img:"https://www.colchoncity.com.ar/wp-content/uploads/compacfirm2022-sommier-2plazas.jpg ",
             stock:5,
             description: 'Descripcion de camas'
         },
